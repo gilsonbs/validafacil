@@ -38,7 +38,7 @@ Os relatórios e indicadores mostram no máximo os 500 lotes com vencimento mais
 ## Próximas etapas
 
 - Homologar Fase 1 no Supabase escolhido e implantar ambiente de teste.
-- Refinar scanner: consulta automática após leitura, testes de dispositivos e mensagens para códigos duplicados.
+- Refinar scanner: testes de dispositivos e mensagens para códigos duplicados.
 - Adicionar paginação/filtros de período, baixa/edição de lotes e trilha de auditoria.
 - Adicionar notificações persistentes e tarefa agendada idempotente, depois push opt-in.
 - Adicionar correção/moderação do catálogo compartilhado e tratamento de fotos/remoção de metadados.

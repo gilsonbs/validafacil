@@ -17,3 +17,5 @@ Como foi aplicada pelo SQL Editor, a migração não é registrada automaticamen
 Testes locais: quatro testes passaram, incluindo PostgreSQL embarcado executando a migração e testes positivos/negativos das políticas. Checagem TypeScript e compilação de produção passaram. A tela inicial também foi verificada no navegador em localhost:3000. A instalação inicial encontrou disco cheio; após liberar apenas as dependências incompletas geradas nesta tarefa e o espaço voltar a ficar disponível, `npm ci` concluiu.
 
 Pendente de homologação real: login com credenciais, criação do master, provisionamento da equipe, upload/câmera em dispositivos e testes de fluxo no Supabase Auth. A integração real exige configuração local das chaves, sem compartilhamento por chat. Não há deploy de aplicação publicado nesta etapa.
+
+Configuração remota adicional: provedor email/password habilitado e cadastro público desabilitado e salvo; login anônimo permanece desabilitado. CI remoto também aprovado: https://github.com/gilsonbs/validafacil/actions/runs/39962443262 .

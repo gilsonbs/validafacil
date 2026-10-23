@@ -1,7 +1,7 @@
 import { z } from 'zod';
 export function loginEmail(value: string) {
   const number = value.trim();
-  if (!/^\d{4,20}$/.test(number)) throw new Error('A matrícula deve conter de 4 a 20 dígitos.');
+  if (!/^\d{3,20}$/.test(number)) throw new Error('A matrícula deve conter de 3 a 20 dígitos.');
   return `${number}@login.validafacil.invalid`;
 }
 export const password = z.string().min(12, 'Use pelo menos 12 caracteres.').max(128);

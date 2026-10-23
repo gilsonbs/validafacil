@@ -4,7 +4,8 @@ import { loginEmail, expiryStatus, password, productSchema } from '../src/lib/va
 test('matrícula preserva zeros e rejeita caracteres ou tamanho inválidos', () => {
  assert.equal(loginEmail('001234'), '001234@login.validafacil.invalid');
  assert.equal(loginEmail(' 1234 '), '1234@login.validafacil.invalid');
- assert.throws(() => loginEmail('123')); assert.throws(() => loginEmail('12-ab-34'));
+ assert.equal(loginEmail('318'), '318@login.validafacil.invalid');
+ assert.throws(() => loginEmail('12')); assert.throws(() => loginEmail('12-ab-34'));
 });
 test('validade considera fronteiras de dia e prazo de 30 dias', () => {
  assert.equal(expiryStatus('2026-10-22','2026-10-23'), 'Vencido');

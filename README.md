@@ -17,7 +17,7 @@ O histórico recuperado contém os requisitos originais, mas as respostas com a 
 5. Configure temporariamente `BOOTSTRAP_PASSWORD` no ambiente local usando um gerenciador de segredos ou prompt seguro. Execute `npm run bootstrap` para criar o primeiro master. Remova essa variável após o uso. Não há senha padrão nem master automático.
 6. Execute `npm run dev` e abra `http://localhost:3000`. Cadastre loja, admin e funcionário; entre com cada perfil para conferir as permissões.
 
-As matrículas são únicas globalmente, com 4–20 dígitos, preservando zeros iniciais. Exemplo: `001234` é diferente de `1234`. A matrícula é convertida em um identificador interno de Auth, não em telefone.
+As matrículas são únicas globalmente, com 3–20 dígitos, preservando zeros iniciais. Exemplo: `001234` é diferente de `1234`. A matrícula é convertida em um identificador interno de Auth, não em telefone.
 
 ## Testes
 

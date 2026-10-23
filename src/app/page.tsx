@@ -1,0 +1,6 @@
+import { configured } from '@/lib/supabase';
+import { login } from './actions';
+export default async function Home({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
+  const { error } = await searchParams;
+  return <main className="login"><section className="intro"><span className="brand">◉ ValidaFácil</span><h1>Cada produto.<br/>No tempo certo.</h1><p>Organize as validades, cuide do estoque e acompanhe sua loja em um só lugar.</p><span className="pill">Controle simples • Catálogo compartilhado</span></section><section className="card"><h2>Bem-vindo de volta</h2><p>Entre para acompanhar sua loja.</p>{error && <p role="alert" className="error">{error}</p>}{configured() ? <form action={login}><label>Matrícula<input name="number" inputMode="numeric" autoComplete="username" placeholder="Sua matrícula" required/></label><label>Senha<input name="password" type="password" autoComplete="current-password" required maxLength={128}/></label><button>Entrar</button><small>Precisa recuperar o acesso? Procure o administrador master.</small></form> : <p className="notice">Base instalada. Configure a conexão com o Supabase seguindo o README para habilitar o acesso.</p>}</section></main>;
+}
